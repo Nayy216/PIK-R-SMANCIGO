@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getaway Space · PIK-R SMANCIGO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Playfair+Display:ital,wght@0,400;1,700&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#080808',
+              accent: '#d4a373',
+              glass: 'rgba(255, 255, 255, 0.03)',
+              border: 'rgba(255, 255, 255, 0.1)',
+            },
+            fontFamily: {
+              apple: ['"Homemade Apple"', 'cursive'],
+              playfair: ['"Playfair Display"', 'serif'],
+              instrument: ['"Instrument Serif"', 'serif'],
+              inter: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #080808;
+        color: #d1d1d1;
+        overflow-x: hidden;
+      }
+      .particle { 
+          position: fixed; 
+          pointer-events: none; 
+          animation: flyUp 2s forwards; 
+          z-index: 1000; 
+      }
+      @keyframes flyUp { 
+          0% { transform: translateY(0) scale(1); opacity: 1; } 
+          100% { transform: translateY(-400px) rotate(360deg) scale(0); opacity: 0; } 
+      }
+
+      /* Custom Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideInBottom {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(20px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+
+      .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+      .animate-slide-in-bottom { animation: slideInBottom 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .animate-slide-in-right { animation: slideInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #080808;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #222;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #333;
+      }
+      
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
